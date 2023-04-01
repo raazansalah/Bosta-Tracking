@@ -19,10 +19,13 @@ function Home() {
             console.log(res.data.CurrentStatus.timestamp) 
             let date = new Date(res.data.CurrentStatus.timestamp);
             console.log(date )
+            let promisedDate = new Date(res.data.PromisedDate);
+            console.log(promisedDate )
             dispatch(addShipment({status:res.data.CurrentStatus.state,
             trackingNumber:res.data.TrackingNumber,
             merchantName:res.data.provider,
-            latestUpdate:date.toDateString()
+            latestUpdate:date.toDateString(),
+            promisedDate:promisedDate.toDateString()
             }))
             navigate(`/tracking-shipments/${trackingNumber}`)    
 
