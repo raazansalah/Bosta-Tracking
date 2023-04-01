@@ -1,8 +1,12 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import InfoElement from '../kit-components/InfoElement'
 
 
 export default function ShipmentInfo() {
+
+  const status = useSelector((state: any) => state.shipment);
+  console.log(status)
   return (
     <div className=' divide-y border-[1px] border-[#EEEEEE] w-full '>
      <div className=' grid grid-cols-4 gap-4  p-6'>

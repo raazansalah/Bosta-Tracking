@@ -1,18 +1,20 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux';
 import { SearchBar } from '../../components/SearchBar'
 import { trackShipment } from '../../services/trackingService'
+import { addShipment } from '../../store/shipmentSlice';
 
 function Home() {
 
-    const [errorMessage, setErrorMessage] = useState('')
+    const [errorMessage, setErrorMessage] = useState('');
+    const dispatch=useDispatch();
 
     const handleTracking =async (trackingNumber:string)=>{
 
-        const res = await trackShipment(trackingNumber)
-       
+        const res = await trackShipment(trackingNumber) 
         if(res.status === 200){
             setErrorMessage('')
-           
+           console.log(res.data.CurrentStatus.state)           
         }else{
             setErrorMessage('No record of this tracking number can be found at this time, please check the number and try again later. For further assistance, please contact Customer Service.')
         }
