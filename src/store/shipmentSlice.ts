@@ -3,12 +3,11 @@ import { createSlice } from '@reduxjs/toolkit';
 export const shipmentSlice = createSlice({
     name: 'shipment',
     initialState: {
-        status:''
     },
     reducers: {
         addShipment: (state, action) => {
         console.log(action.payload,state)
-        state.status = action.payload
+        return action.payload;
       }
     },
   });

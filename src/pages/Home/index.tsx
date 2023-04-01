@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { SearchBar } from '../../components/SearchBar'
 import { trackShipment } from '../../services/trackingService'
 import { addShipment } from '../../store/shipmentSlice';
@@ -8,13 +9,23 @@ function Home() {
 
     const [errorMessage, setErrorMessage] = useState('');
     const dispatch=useDispatch();
+    const navigate = useNavigate();
 
     const handleTracking =async (trackingNumber:string)=>{
 
         const res = await trackShipment(trackingNumber) 
         if(res.status === 200){
             setErrorMessage('')
-           console.log(res.data.CurrentStatus.state)           
+            console.log(res.data.CurrentStatus.timestamp) 
+            let date = new Date(res.data.CurrentStatus.timestamp);
+            console.log(date )
+            dispatch(addShipment({status:res.data.CurrentStatus.state,
+            trackingNumber:res.data.TrackingNumber,
+            merchantName:res.data.provider,
+            latestUpdate:date.toDateString()
+            }))
+            navigate(`/tracking-shipments/${trackingNumber}`)    
+
         }else{
             setErrorMessage('No record of this tracking number can be found at this time, please check the number and try again later. For further assistance, please contact Customer Service.')
         }
@@ -32,3 +43,5 @@ function Home() {
 }
 
 export default Home
+
+
