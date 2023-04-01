@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-export const trackShipment = async (
+export const trackShipment =  (
     trackingNumber:string
   ) => {
     return axios
       .get(`https://tracking.bosta.co/shipments/track/${trackingNumber}`)
-      .then((res) => res.data.api_response)
+      .then((res) => res)
       .catch((err) => err?.response);
   };
