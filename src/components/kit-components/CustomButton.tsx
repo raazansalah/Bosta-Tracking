@@ -1,8 +1,12 @@
+interface CustomButtonPropsType{
+  text:string
+}
 
-function CustomButton() {
+function CustomButton(props:CustomButtonPropsType) {
+  const {text}= props
   return (
     <button className='h-12 w-full  bg-[#E43F21] text-white rounded-2xl flex justify-center items-center'>
-        <p className=''>Report a Problem</p>
+        <p >{text}</p>
     </button>
   )
 }

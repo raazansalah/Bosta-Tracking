@@ -1,9 +1,10 @@
 
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 
 export default function ShipmentDetails() {
   const {trackEvents} = useSelector((state: any) => state.shipment);
-  console.log(trackEvents)
+  const {t} = useTranslation()
 
   const getDate=(timestamp:string)=>{
     const date= new Date(timestamp)
@@ -23,10 +24,10 @@ export default function ShipmentDetails() {
   return (
     <div className='w-full border-[1px] border-[#EEEEEE] rounded-xl'>
       <header className='grid grid-cols-4 bg-[#FAFAFA] border-b-[1px] border-[#EEEEEE] text-[#8F9BB3] font-semibold p-6'>
-        <p>Branch</p>
-        <p>Date</p>
-        <p>Time</p>
-        <p>Details</p>
+        <p>{t('BRANCH')}</p>
+        <p>{t('TABLE_DATE')}</p>
+        <p>{t('TABLE_TIME')}</p>
+        <p>{t('TABLE_DETAILS')}</p>
       </header>
       <div className='grid grid-cols-4 p-6 gap-y-6 text-sm'>
        {

@@ -1,0 +1,17 @@
+{
+    "SHIPMENT_NUMBER":"Shipment number",
+    "LATEST":"Latest update",
+    "MERCHANT_NAME":"Merchant name",
+    "DATE":"Date",
+    "DELIVERED":"Delivered",
+    "SHIPMENT_DETAILS":"Shipment Details",
+    "SHIPMENT_ADDRESS":"Shipment Address",
+    "BRANCH":"Branch",
+    "TABLE_DATE":"Date",
+    "TABLE_TIME":"Time",
+    "TABLE_DETAILS":"Details",
+    "ADDRESS_DETAILS":"FFF",
+    "PROBLEM_QUESTION":"Did you have a problem?!",
+    "REPORT_BUTTON":"Report a problem"
+
+}
