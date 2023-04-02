@@ -25,7 +25,8 @@ function Home() {
             trackingNumber:res.data.TrackingNumber,
             merchantName:res.data.provider,
             latestUpdate:date.toDateString(),
-            promisedDate:promisedDate.toDateString()
+            promisedDate:promisedDate.toDateString(),
+            trackEvents: res.data.TransitEvents
             }))
             navigate(`/tracking-shipments/${trackingNumber}`)    
 
