@@ -10,13 +10,13 @@ export default function ShipmentTracking() {
     <div className='flex justify-center flex-col items-center '>
         <ShipmentInfo />
         <div className='grid grid-flow-row-dense grid-cols-3 gap-12 w-full mt-8'>
-            <div className='col-span-2'>
-              <p className='mb-4'>Shipment Details</p>
+            <div className='col-span-3  lg:col-span-2'>
+              <p className='mb-6 text-lg'>Shipment Details</p>
               <ShipmentDetails />
 
             </div>
-            <div className='col-span-1'>
-              <p className='mb-4'>Shipment Address</p>
+            <div className='col-span-3 lg:col-span-1'>
+              <p className='mb-6 text-lg'>Shipment Address</p>
               <AddressInfo />
               <ReportProblem />
               
