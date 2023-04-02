@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import InfoElement from '../kit-components/InfoElement'
+import TrackingStepper from '../TrackingStepper';
 
 
 export default function ShipmentInfo() {
@@ -16,7 +17,7 @@ export default function ShipmentInfo() {
       <InfoElement title='Date' value={promisedDate} />
      </div>
      <div className='p-6'>
-      Tracking stepper
+     <TrackingStepper status={status}/>
      </div>
     </div>
   )

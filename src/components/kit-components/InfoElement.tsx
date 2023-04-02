@@ -9,8 +9,8 @@ export default function InfoElement(props:InfoElementProps) {
 
   return (
    <div>
-     <p className='text-[#CBCBCB] font-semibold text-base'>{title}</p>
-     <p className="font-semibold text-lg">{value}</p>
+     <p className='text-[#CBCBCB] font-semibold text-base mb-4'>{title}</p>
+     <p className="font-semibold text-base">{value}</p>
    </div>
   )
 }
