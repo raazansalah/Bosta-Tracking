@@ -31,7 +31,7 @@ export default function ShipmentDetails() {
       </header>
       <div className='grid grid-cols-4 p-6 gap-6 text-sm w-full ' >
        {
-        trackEvents.map((event:any) => (
+        trackEvents && trackEvents.map((event:any) => (
           <>
           <p>{event?.hub}</p>
           <p>{getDate(event?.timestamp)}</p>

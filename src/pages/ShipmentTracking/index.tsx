@@ -1,5 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import AddressInfo from '../../components/AddressInfo'
 import ReportProblem from '../../components/ReportProblem'
 import ShipmentDetails from '../../components/ShipmentDetails'
@@ -8,7 +10,9 @@ import ShipmentInfo from '../../components/ShipmentInfo'
 export default function ShipmentTracking() {
   const {t} = useTranslation()
   const { i18n } = useTranslation();
+  const navigate = useNavigate();
   const [direction, setDirection] = useState('ltr')
+  const {status} = useSelector((state: any) => state.shipment);
 
   function changeLanguage(e:any) {
     i18n.changeLanguage(e.target.value);
@@ -19,6 +23,12 @@ export default function ShipmentTracking() {
     }
   }
 
+  useEffect(() => {
+    if(!status){
+      navigate('/')
+    }
+  })
+  
   return (
     <div className='flex justify-center flex-col items-center ' dir={direction}>
       <div>
