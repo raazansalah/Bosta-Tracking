@@ -1,3 +1,19 @@
 {
-    "DELIVERED":"تم تسليم الشحنة"
+    "SHIPMENT_NUMBER":"رقم الشحنة",
+    "LATEST":"اخر تحديث",
+    "MERCHANT_NAME":"اسم التاجر",
+    "DATE":"موعد التسليم",
+    "DELIVERED":"تم الشحن",
+    "CANCELLED":"تم الغاء الشحنة",
+    "NOT_YET_SHIPPED":"لم يتم الشحن",
+    "SHIPMENT_DETAILS":"تفاصيل الشحنة",
+    "SHIPMENT_ADDRESS":"عنوان الشحنة",
+    "BRANCH":"الفرع",
+    "TABLE_DATE":"التاريخ",
+    "TABLE_TIME":"الوقت",
+    "TABLE_DETAILS":"تفاصيل",
+    "ADDRESS_DETAILS":"العنوان",
+    "PROBLEM_QUESTION":"هل لديك مشكلة؟",
+    "REPORT_BUTTON":"ابلاغ عم مشكبة"
+
 }
