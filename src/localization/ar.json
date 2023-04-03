@@ -12,6 +12,11 @@
     "TABLE_DATE":"التاريخ",
     "TABLE_TIME":"الوقت",
     "TABLE_DETAILS":"تفاصيل",
+    "TICKET_CREATED":"تم انشاء الشحنة",
+    "PACKAGE_RECEIVED":"تن استلام الشحنة",
+    "IN_TRANSIT":"الشحنة خرجت للتسليم",
+    "WAITING_FOR_CUSTOMER_ACTION":"انتظار العميل",
+    "OUT_FOR_DELIVERY":" للتسليم",
     "ADDRESS_DETAILS":"العنوان",
     "PROBLEM_QUESTION":"هل لديك مشكلة؟",
     "REPORT_BUTTON":"ابلاغ عم مشكبة"

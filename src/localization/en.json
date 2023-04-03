@@ -12,8 +12,14 @@
     "TABLE_DATE":"Date",
     "TABLE_TIME":"Time",
     "TABLE_DETAILS":"Details",
+    "TICKET_CREATED":"Shipment created",
+    "PACKAGE_RECEIVED":"Package received",
+    "IN_TRANSIT":"Shipped out",
+    "WAITING_FOR_CUSTOMER_ACTION":"Waiting customer",
+    "OUT_FOR_DELIVERY":"Out for delivery",
     "ADDRESS_DETAILS":"FFF",
     "PROBLEM_QUESTION":"Did you have a problem?!",
     "REPORT_BUTTON":"Report a problem"
+
 
 }

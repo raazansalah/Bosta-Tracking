@@ -36,7 +36,7 @@ export default function ShipmentDetails() {
           <p>{event?.hub}</p>
           <p>{getDate(event?.timestamp)}</p>
           <p>{getTime(event?.timestamp)}</p>
-          <p>{event?.state}</p>
+          <p>{t(event?.state)}</p>
           </>
       ))
     
