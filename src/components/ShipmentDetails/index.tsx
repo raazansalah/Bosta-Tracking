@@ -22,14 +22,14 @@ export default function ShipmentDetails() {
       return formattedTime
   }
   return (
-    <div className='w-full border-[1px] border-[#EEEEEE] rounded-xl'>
-      <header className='grid grid-cols-4 bg-[#FAFAFA] border-b-[1px] border-[#EEEEEE] text-[#8F9BB3] font-semibold p-6'>
+    <div className='w-full border-[1px] border-[#EEEEEE] rounded-xl overflow-x-auto'>
+      <header className='grid grid-cols-4 gap-6 bg-[#FAFAFA]  w-full border-b-[1px] border-[#EEEEEE] text-[#8F9BB3] font-semibold p-6 sm:gap-x-12'>
         <p>{t('BRANCH')}</p>
         <p>{t('TABLE_DATE')}</p>
         <p>{t('TABLE_TIME')}</p>
         <p>{t('TABLE_DETAILS')}</p>
       </header>
-      <div className='grid grid-cols-4 p-6 gap-y-6 text-sm'>
+      <div className='grid grid-cols-4 p-6 gap-6 text-sm w-full ' >
        {
         trackEvents.map((event:any) => (
           <>

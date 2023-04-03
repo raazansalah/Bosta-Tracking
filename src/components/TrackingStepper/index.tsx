@@ -31,13 +31,12 @@ function TrackingStepper(props:TrackingStepperProps) {
           } 
     }
 
+
     useEffect(() => {
       setActiveStep(getActiveStep())
-      
+ 
     })
 
-    
-    
     return (
         <Stepper activeStep={activeStep} connectorStateColors
         connectorStyleConfig={

@@ -11,22 +11,31 @@ function Home() {
     const dispatch=useDispatch();
     const navigate = useNavigate();
 
+    const getActiveColor =(status:string)=>{
+        switch (status) {
+            case 'DELIVERED':
+              return '#5AB824';
+            case 'CANCELLED':
+                return '#F9BA33';
+            default:
+              return '#F24423';
+    }
+    }
     const handleTracking =async (trackingNumber:string)=>{
 
         const res = await trackShipment(trackingNumber) 
         if(res.status === 200){
             setErrorMessage('')
-            console.log(res.data.CurrentStatus.timestamp) 
-            let date = new Date(res.data.CurrentStatus.timestamp);
-            console.log(date )
-            let promisedDate = new Date(res.data.PromisedDate);
-            console.log(promisedDate )
-            dispatch(addShipment({status:res.data.CurrentStatus.state,
-            trackingNumber:res.data.TrackingNumber,
-            merchantName:res.data.provider,
-            latestUpdate:date.toDateString(),
-            promisedDate:promisedDate.toDateString(),
-            trackEvents: res.data.TransitEvents
+            const date = new Date(res.data.CurrentStatus.timestamp);
+            const promisedDate = new Date(res.data.PromisedDate);
+            dispatch(addShipment({
+              status:res.data.CurrentStatus.state,
+              trackingNumber:res.data.TrackingNumber,
+              merchantName:res.data.provider,
+              latestUpdate:date.toDateString(),
+              promisedDate:promisedDate.toDateString(),
+              trackEvents: res.data.TransitEvents,
+              activeColor:getActiveColor(res.data.CurrentStatus.state)
             }))
             navigate(`/tracking-shipments/${trackingNumber}`)    
 
