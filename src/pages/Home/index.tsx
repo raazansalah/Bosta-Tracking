@@ -47,8 +47,8 @@ function Home() {
     }
 
   return (
-    <div className='flex flex-col justify-center items-center h-full '>
-        <h4 className='text-4xl mb-8 font-medium'>Track your shipment</h4>
+    <div className='flex flex-col justify-center items-center h-full  w-full'>
+        <h4 className='text-4xl mb-8 font-medium align-center'>Track your shipment</h4>
         <SearchBar  onSubmit={handleTracking}/>
        {errorMessage &&
          <p className='w-1/2 bg-[#FEF3F2] text-sm border-[#FACDCA] border-[1px] p-4 my-24'>{errorMessage}</p>

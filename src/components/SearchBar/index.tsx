@@ -28,7 +28,7 @@ export function SearchBar (props:SearchBarProps) {
       };
 
   return (
-    <div className=' flex shadow-[rgba(0,_0,_0,_0.24)_0px_2px_8px] h-14 w-1/2'>
+    <div className=' flex shadow-[rgba(0,_0,_0,_0.24)_0px_2px_8px] h-14 w-full lg:w-1/2'>
         <input
             className='rounded-l-lg focus:outline-0 h-14 w-full pl-4'
             placeholder="Tracking No."

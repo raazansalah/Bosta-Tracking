@@ -38,7 +38,7 @@ function TrackingStepper(props:TrackingStepperProps) {
     })
 
     return (
-        <Stepper activeStep={activeStep} connectorStateColors
+        <Stepper activeStep={activeStep} connectorStateColors dir='ltr'
         connectorStyleConfig={
             {
                 disabledColor:'#CFCFCE',
