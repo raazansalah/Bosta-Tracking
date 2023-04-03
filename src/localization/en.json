@@ -4,6 +4,8 @@
     "MERCHANT_NAME":"Merchant name",
     "DATE":"Date",
     "DELIVERED":"Delivered",
+    "CANCELLED":"Canceled",
+    "NOT_YET_SHIPPED":"Not Shipped",
     "SHIPMENT_DETAILS":"Shipment Details",
     "SHIPMENT_ADDRESS":"Shipment Address",
     "BRANCH":"Branch",

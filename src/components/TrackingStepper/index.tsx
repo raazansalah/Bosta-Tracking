@@ -14,8 +14,8 @@ function TrackingStepper(props:TrackingStepperProps) {
     const colors:colorsOptions =
     {
         DELIVERED:'#5AB824',
-        CANCELLED:'#F9BA33',
-        NOT_YET_SHIPPED:'#F24423'
+        CANCELLED:'#F24423',
+        NOT_YET_SHIPPED:'#F9BA33'
     }
 
     const getActiveStep =()=>{

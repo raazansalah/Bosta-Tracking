@@ -12,13 +12,15 @@ function Home() {
     const navigate = useNavigate();
 
     const getActiveColor =(status:string)=>{
+      console.log(status)
         switch (status) {
+          
             case 'DELIVERED':
-              return '#5AB824';
+              return 'text-[#5AB824]';
             case 'CANCELLED':
-                return '#F9BA33';
+                return 'text-[#F24423]';
             default:
-              return '#F24423';
+              return 'text-[#F9BA33]';
     }
     }
     const handleTracking =async (trackingNumber:string)=>{
