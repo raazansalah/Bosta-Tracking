@@ -51,3 +51,9 @@ $ npm start
 - axios
 - Redux
 - React-form-stepper
+
+
+### Deployment
+
+> using Vercel
+> [Shorten Website](https://bosta-tracking-git-master-raazansalah.vercel.app/)
